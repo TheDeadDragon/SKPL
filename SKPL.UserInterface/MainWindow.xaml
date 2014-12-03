@@ -16,6 +16,5 @@
         <Border Margin="10,10,104,10" BorderBrush="Black" BorderThickness="2">
             <DataGrid x:Name="Skemagrid" />
         </Border>
-
     </Grid>
 </Window>
