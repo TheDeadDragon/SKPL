@@ -1,0 +1,134 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<useCaseModelRoot xmlns:dm0="http://schemas.microsoft.com/VisualStudio/2008/DslTools/Core" xmlns:dm1="http://schemas.microsoft.com/dsltools/Kernel" xmlns:dm2="http://schemas.microsoft.com/dsltools/Component" xmlns:dm3="http://schemas.microsoft.com/dsltools/Activity" xmlns:dm4="http://schemas.microsoft.com/dsltools/Interaction" xmlns:dm5="http://schemas.microsoft.com/dsltools/UseCase" xmlns:dm6="http://schemas.microsoft.com/dsltools/UmlModelLibrary" xmlns:dm7="http://schemas.microsoft.com/dsltools/UmlDiagrams" xmlns:dm8="http://schemas.microsoft.com/dsltools/ModelStore" xmlns:dm9="http://schemas.microsoft.com/dsltools/SimpleShapesModel" dslVersion="1.0.0.0" Id="85f83c50-f317-40f2-9819-0ca4d3f037b5" name="UUC" linkedPackageId="7aaff606-869f-4484-9e9d-9e1795529d22" xmlns="http://schemas.microsoft.com/dsltools/UseCaseModel">
+  <profileInstances>
+    <packageHasProfileInstances Id="53fb2e18-0b72-4d68-abb3-144f37782913">
+      <profileInstance Id="c420482b-e863-41ac-852f-7faf24fcdf6f" name="StandardProfileL2">
+        <elementDefinition Id="e34d544e-0fea-4ed6-ac5e-1b74119ac791" />
+      </profileInstance>
+      <elementDefinition Id="0caec977-1f8c-4ba3-a7db-8cc9ad9cc73b" />
+    </packageHasProfileInstances>
+    <packageHasProfileInstances Id="07864689-5991-4a4b-ad8c-746a5e7c8cd8">
+      <profileInstance Id="8a4b127d-c364-4401-aff2-fb35146a54e3" name="StandardProfileL3">
+        <elementDefinition Id="532ea607-fb19-44b8-8502-3351b05452be" />
+      </profileInstance>
+      <elementDefinition Id="29349502-908c-4fda-9054-c48619c59ed0" />
+    </packageHasProfileInstances>
+  </profileInstances>
+  <packagedElements>
+    <useCaseModelRootHasTypes>
+      <actor Id="c6010e52-4793-4835-aff1-00019ff60448" name="Teacher" isAbstract="false" isLeaf="false">
+        <elementDefinition Id="41801901-885d-42ca-a611-12845003eaa3" />
+        <targetEnds>
+          <association Id="b176f895-d8c2-4436-ac81-bb88aca3bce3" isDerived="false" sourceEndRoleName="Teacher" targetEndRoleName="UseCase1" isLeaf="false" isAbstract="false">
+            <useCaseMoniker Id="de1096b4-0903-42fd-a0c7-e366dc557c57" LastKnownName="Create/Modify/Delete Teacher" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd Id="c1bc2f33-b2d6-451d-8794-26052d986830" name="Teacher" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false" isNavigableOwned="false">
+                  <elementDefinition Id="89e581b8-6a4f-4945-a836-de4841ecb901" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd Id="c70fe69b-a395-4bcf-8bb1-a68680308d8a" name="UseCase1" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+                  <elementDefinition Id="d2883784-a36c-4d35-87cc-ee9bf638770e" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+            <elementDefinition Id="720a9734-af6c-4d4f-9e23-88f26d053365" />
+          </association>
+          <association Id="6de36c30-efbf-4bed-9cb0-9785e50e7720" isDerived="false" sourceEndRoleName="Teacher" targetEndRoleName="Create/Modify/Delete Lecture" isLeaf="false" isAbstract="false">
+            <useCaseMoniker Id="55ceb894-5bc1-44e2-a5e9-73fea46d5313" LastKnownName="Create/Modify/Delete Lecture" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd Id="a7c826fb-ef60-46f1-b1a1-9e887b870a43" name="Teacher" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false" isNavigableOwned="false">
+                  <elementDefinition Id="c12faddc-0eee-4d1d-bcf3-0dca946df680" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd Id="7751dc87-362a-42ab-ab35-0a9dfeab2ecb" name="Create/Modify/Delete Lecture" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+                  <elementDefinition Id="dea33650-cf50-476b-ad8a-4852a748ab6c" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+            <elementDefinition Id="105dc987-2386-4d13-acb0-f59696fcab8c" />
+          </association>
+          <association Id="0279b7f5-87bd-465f-9fe5-4fdb40bc4b20" isDerived="false" sourceEndRoleName="Teacher" targetEndRoleName="Create/Modify/Delete Student" isLeaf="false" isAbstract="false">
+            <useCaseMoniker Id="9ccee9a1-d263-4f12-a0c7-fb43362613c2" LastKnownName="Create/Modify/Delete Student" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd Id="3b2c617b-4d21-4568-bef9-3c8f573590b1" name="Teacher" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false" isNavigableOwned="false">
+                  <elementDefinition Id="0f0e54da-37e0-4c85-9950-5a07d8735f23" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd Id="920496f8-7800-4638-9bd6-e796f17955db" name="Create/Modify/Delete Student" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+                  <elementDefinition Id="092adc19-f66a-495e-8429-bead33210810" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+            <elementDefinition Id="fc234a5e-80d3-4038-b94c-795725914f90" />
+          </association>
+          <association Id="b6afd6e9-019d-42eb-8148-6c37b9a5d29c" isDerived="false" sourceEndRoleName="Teacher" targetEndRoleName="Create/Modify/Delete Class" isLeaf="false" isAbstract="false">
+            <useCaseMoniker Id="830f8901-8be3-45bb-a2d7-96db8b7b9dcf" LastKnownName="Create/Modify/Delete Class" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd Id="d46403fa-794b-4808-abea-9c8b4f48ffed" name="Teacher" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false" isNavigableOwned="false">
+                  <elementDefinition Id="e7405cd6-64c7-43bb-b545-41a8e25a1759" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd Id="9ceee68d-b8ad-48ef-be67-5a9e01a8509e" name="Create/Modify/Delete Class" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+                  <elementDefinition Id="9aa73288-907c-4c1e-a238-011b83fa042c" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+            <elementDefinition Id="c1cb8bde-91f8-4bf4-9b43-09c6c59e958d" />
+          </association>
+          <association Id="c54e67bf-1288-4b50-893f-e47c7c106b73" isDerived="false" sourceEndRoleName="Teacher" targetEndRoleName="Create/Modify/Delete Class instance" isLeaf="false" isAbstract="false">
+            <useCaseMoniker Id="21370f35-4c08-4aff-84af-5fbfd45b0dc7" LastKnownName="Create/Modify/Delete Class instance" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd Id="79046fbb-a979-4e95-8eb7-cf08f7b21764" name="Teacher" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false" isNavigableOwned="false">
+                  <elementDefinition Id="a842aa0f-cfe7-412f-9ea4-4f8a1610d646" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd Id="4e6134d8-580b-457e-8363-beaef6069dff" name="Create/Modify/Delete Class instance" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+                  <elementDefinition Id="ccec2313-6db6-425c-b5d4-74ffb6d24c8c" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+            <elementDefinition Id="1207c286-187a-4ca1-beea-ba9c00ae0cfd" />
+          </association>
+        </targetEnds>
+      </actor>
+    </useCaseModelRootHasTypes>
+    <useCaseModelRootHasTypes>
+      <useCase Id="de1096b4-0903-42fd-a0c7-e366dc557c57" name="Create/Modify/Delete Teacher" isAbstract="false" isLeaf="false">
+        <elementDefinition Id="4b15da63-098a-4e8d-9b9a-1063b5821173" />
+      </useCase>
+    </useCaseModelRootHasTypes>
+    <useCaseModelRootHasTypes>
+      <useCase Id="55ceb894-5bc1-44e2-a5e9-73fea46d5313" name="Create/Modify/Delete Lecture" isAbstract="false" isLeaf="false">
+        <elementDefinition Id="d13e3147-b692-4f3e-9360-de323442b54b" />
+      </useCase>
+    </useCaseModelRootHasTypes>
+    <useCaseModelRootHasTypes>
+      <useCase Id="9ccee9a1-d263-4f12-a0c7-fb43362613c2" name="Create/Modify/Delete Student" isAbstract="false" isLeaf="false">
+        <elementDefinition Id="b7bd0c33-76fb-4d03-9c86-dae433d69c77" />
+      </useCase>
+    </useCaseModelRootHasTypes>
+    <useCaseModelRootHasTypes>
+      <useCase Id="830f8901-8be3-45bb-a2d7-96db8b7b9dcf" name="Create/Modify/Delete Class" isAbstract="false" isLeaf="false">
+        <elementDefinition Id="83d67eec-4dad-43df-8afa-88f1adfd9851" />
+      </useCase>
+    </useCaseModelRootHasTypes>
+    <useCaseModelRootHasTypes>
+      <useCase Id="21370f35-4c08-4aff-84af-5fbfd45b0dc7" name="Create/Modify/Delete Class instance" isAbstract="false" isLeaf="false">
+        <elementDefinition Id="a4b88847-6f1b-442d-9565-b48b18478c7e" />
+      </useCase>
+    </useCaseModelRootHasTypes>
+  </packagedElements>
+  <package Id="7aaff606-869f-4484-9e9d-9e1795529d22" name="Diagrams">
+    <elementDefinition Id="e4795e7c-8fd2-4534-a1f1-1e46c2772881" />
+  </package>
+</useCaseModelRoot>
