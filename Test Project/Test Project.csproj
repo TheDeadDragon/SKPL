@@ -64,6 +64,12 @@
     <None Include="App.config" />
     <None Include="packages.config" />
   </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\SKPL.ClassLibary\SKPL.ClassLibary.csproj">
+      <Project>{ca5e67fe-4489-41b1-a45d-d7f9aa20d1b8}</Project>
+      <Name>SKPL.ClassLibary</Name>
+    </ProjectReference>
+  </ItemGroup>
   <Choose>
     <When Condition="'$(VisualStudioVersion)' == '10.0' And '$(IsCodedUITest)' == 'True'">
       <ItemGroup>
