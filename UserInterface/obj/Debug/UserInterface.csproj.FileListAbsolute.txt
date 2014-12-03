@@ -1,2 +1,0 @@
-c:\users\deaddragon\documents\visual studio 2013\Projects\SKPL\UserInterface\bin\Debug\UserInterface.exe.config
-C:\Users\DeadDragon\Source\Repos\SKPL\UserInterface\bin\Debug\UserInterface.exe.config
