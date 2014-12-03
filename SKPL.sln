@@ -9,6 +9,10 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Tests", "Tests", "{FC123DF3
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Test Project", "Test Project\Test Project.csproj", "{E3C14E24-3969-4B78-BD38-FC33B0854FD2}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SKPL.UserInterface", "SKPL.UserInterface\SKPL.UserInterface.csproj", "{24DB7CA2-8937-4675-AEC2-45B6F281BB93}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SKPL.ClassLibary", "SKPL.ClassLibary\SKPL.ClassLibary.csproj", "{CA5E67FE-4489-41B1-A45D-D7F9AA20D1B8}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -19,11 +23,21 @@ Global
 		{E3C14E24-3969-4B78-BD38-FC33B0854FD2}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{E3C14E24-3969-4B78-BD38-FC33B0854FD2}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{E3C14E24-3969-4B78-BD38-FC33B0854FD2}.Release|Any CPU.Build.0 = Release|Any CPU
+		{24DB7CA2-8937-4675-AEC2-45B6F281BB93}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{24DB7CA2-8937-4675-AEC2-45B6F281BB93}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{24DB7CA2-8937-4675-AEC2-45B6F281BB93}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{24DB7CA2-8937-4675-AEC2-45B6F281BB93}.Release|Any CPU.Build.0 = Release|Any CPU
+		{CA5E67FE-4489-41B1-A45D-D7F9AA20D1B8}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{CA5E67FE-4489-41B1-A45D-D7F9AA20D1B8}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{CA5E67FE-4489-41B1-A45D-D7F9AA20D1B8}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{CA5E67FE-4489-41B1-A45D-D7F9AA20D1B8}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
 	EndGlobalSection
 	GlobalSection(NestedProjects) = preSolution
 		{E3C14E24-3969-4B78-BD38-FC33B0854FD2} = {FC123DF3-9AEC-4D05-96AD-128058F5B635}
+		{24DB7CA2-8937-4675-AEC2-45B6F281BB93} = {FF0EC436-653A-4863-8452-77F88611F66A}
+		{CA5E67FE-4489-41B1-A45D-D7F9AA20D1B8} = {FF0EC436-653A-4863-8452-77F88611F66A}
 	EndGlobalSection
 EndGlobal
