@@ -15,11 +15,11 @@ using System.Windows.Shapes;
 namespace SKPL.UserInterface
 {
     /// <summary>
-    /// Interaction logic for Add.xaml
+    /// Interaction logic for AddData.xaml
     /// </summary>
-    public partial class Add : Window
+    public partial class AddData : Window
     {
-        public Add()
+        public AddData()
         {
             InitializeComponent();
         }

@@ -10,25 +10,18 @@ using System.Windows.Documents;
 using System.Windows.Input;
 using System.Windows.Media;
 using System.Windows.Media.Imaging;
-using System.Windows.Navigation;
 using System.Windows.Shapes;
 
 namespace SKPL.UserInterface
 {
     /// <summary>
-    /// Interaction logic for MainWindow.xaml
+    /// Interaction logic for EditData.xaml
     /// </summary>
-    public partial class MainWindow : Window
+    public partial class EditData : Window
     {
-        public MainWindow()
+        public EditData()
         {
             InitializeComponent();
-        }
-
-        private void Opret_OnClick(object sender, RoutedEventArgs e)
-        {
-            var add = new AddData();
-            add.Show();
         }
     }
 }
