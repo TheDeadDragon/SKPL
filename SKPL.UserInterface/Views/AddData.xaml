@@ -1,4 +1,4 @@
-﻿<Window x:Class="SKPL.UserInterface.AddData"
+﻿<Window x:Class="SKPL.UserInterface.Views.AddData"
         xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
         Title="AddData" Height="300" Width="300">

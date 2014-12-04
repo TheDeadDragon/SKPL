@@ -1,4 +1,4 @@
-﻿<Window x:Class="SKPL.UserInterface.DeleteData"
+﻿<Window x:Class="SKPL.UserInterface.Views.DeleteData"
         xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
         Title="DeleteData" Height="300" Width="300">
