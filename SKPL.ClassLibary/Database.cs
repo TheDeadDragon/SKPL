@@ -59,13 +59,14 @@ namespace SKPL.ClassLibary
         public int StudentId { get; set; }
         public string StudentName { get; set; }
 
-        public int ClassInstanceId { get; set; } //can be null
+        public int ClassInstanceId { get; set; }
         public virtual ClassInstance ClassInstance { get; set; }
     }
     public class Teachers
     {
         public int TeacherId { get; set; }
         public string TeacherName { get; set; }
+        public string TeacherInitials { get; set; }
     }
     public class TeacherClasses
     {
