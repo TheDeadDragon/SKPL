@@ -24,5 +24,11 @@ namespace SKPL.UserInterface
         {
             InitializeComponent();
         }
+
+        private void Opret_OnClick(object sender, RoutedEventArgs e)
+        {
+            var add = new Add();
+            add.Show();
+        }
     }
 }

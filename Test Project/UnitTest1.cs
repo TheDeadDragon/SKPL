@@ -1,6 +1,6 @@
 ﻿using System;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
-
+using SKPL.ClassLibary;
 namespace Test_Project
 {
     [TestClass]
@@ -9,7 +9,7 @@ namespace Test_Project
         [TestMethod]
         public void Database()
         {
-            Assert.IsTrue(SKPL.ClassLibary.Database.Create.DBCreated);
+            
         }
     }
 }

@@ -108,6 +108,12 @@
   <ItemGroup>
     <None Include="App.config" />
   </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\SKPL.ClassLibary\SKPL.ClassLibary.csproj">
+      <Project>{ca5e67fe-4489-41b1-a45d-d7f9aa20d1b8}</Project>
+      <Name>SKPL.ClassLibary</Name>
+    </ProjectReference>
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.

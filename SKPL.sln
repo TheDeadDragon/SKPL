@@ -10,6 +10,9 @@ EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Test Project", "Test Project\Test Project.csproj", "{E3C14E24-3969-4B78-BD38-FC33B0854FD2}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SKPL.UserInterface", "SKPL.UserInterface\SKPL.UserInterface.csproj", "{24DB7CA2-8937-4675-AEC2-45B6F281BB93}"
+	ProjectSection(ProjectDependencies) = postProject
+		{CA5E67FE-4489-41B1-A45D-D7F9AA20D1B8} = {CA5E67FE-4489-41B1-A45D-D7F9AA20D1B8}
+	EndProjectSection
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SKPL.ClassLibary", "SKPL.ClassLibary\SKPL.ClassLibary.csproj", "{CA5E67FE-4489-41B1-A45D-D7F9AA20D1B8}"
 EndProject
