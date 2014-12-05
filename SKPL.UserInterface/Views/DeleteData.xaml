@@ -3,6 +3,16 @@
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
         Title="DeleteData" Height="300" Width="300">
     <Grid>
+        <ComboBox x:Name="RemoveBox"  HorizontalAlignment="Left" Margin="90,10,0,0" VerticalAlignment="Top" Width="192" SelectionChanged="ComboBox_SelectionChanged">
+            <ComboBoxItem x:Name="TeacherBoxItem" Content="Lære"/>
+            <ComboBoxItem x:Name="LectureBoxItem" Content="Fag"/>
+            <ComboBoxItem x:Name="ClassBoxItem" Content="Hold"/>
+            <ComboBoxItem x:Name="StudentBoxItem" Content="Elev"/>
+            <ComboBoxItem x:Name="ClassInstanceBoxItem" Content="Hold Instans"/>
+        </ComboBox>
+        <Label Content="Slet:" HorizontalAlignment="Left" Margin="10,10,0,0" VerticalAlignment="Top" Width="75"/>
+        <Button Content="Slet" HorizontalAlignment="Left" Margin="50,230,0,0" VerticalAlignment="Top" Width="75"/>
+        <Button Content="Ok" HorizontalAlignment="Left" Margin="160,230,0,0" VerticalAlignment="Top" Width="75"/>
         
     </Grid>
 </Window>

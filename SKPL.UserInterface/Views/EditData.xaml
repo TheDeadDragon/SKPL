@@ -3,6 +3,66 @@
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
         Title="EditData" Height="300" Width="300">
     <Grid>
-        
+        <ComboBox x:Name="EditBox"  HorizontalAlignment="Left" Margin="90,10,0,0" VerticalAlignment="Top" Width="192" SelectionChanged="ComboBox_SelectionChanged">
+            <ComboBoxItem x:Name="TeacherBoxItem" Content="Lære"/>
+            <ComboBoxItem x:Name="LectureBoxItem" Content="Fag"/>
+            <ComboBoxItem x:Name="ClassBoxItem" Content="Hold"/>
+            <ComboBoxItem x:Name="StudentBoxItem" Content="Elev"/>
+            <ComboBoxItem x:Name="ClassInstanceBoxItem" Content="Hold Instans"/>
+        </ComboBox>
+        <Label Content="Rediger:" HorizontalAlignment="Left" Margin="10,10,0,0" VerticalAlignment="Top" Width="75"/>
+        <Button Content="Rediger" HorizontalAlignment="Left" Margin="50,230,0,0" VerticalAlignment="Top" Width="75"/>
+        <Button Content="Ok" HorizontalAlignment="Left" Margin="160,230,0,0" VerticalAlignment="Top" Width="75"/>
+        <GroupBox Visibility="Hidden" Header="Lære" HorizontalAlignment="Left" Margin="10,41,0,0" VerticalAlignment="Top" Height="193" Width="272" Name="TeacherBox">
+            <Grid HorizontalAlignment="Left" Height="193" VerticalAlignment="Top" Width="272" Margin="0,0,-12,-22">
+                <Label Content="Fornavn:" HorizontalAlignment="Left" VerticalAlignment="Top" Width="70"/>
+                <TextBox HorizontalAlignment="Left" Height="23" Margin="70,3,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="192"/>
+                <Label Content="Efternavn" HorizontalAlignment="Left" Margin="0,31,0,0" VerticalAlignment="Top" Width="65"/>
+                <TextBox HorizontalAlignment="Left" Height="23" Margin="70,31,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="192"/>
+
+            </Grid>
+        </GroupBox>
+        <GroupBox Visibility="Hidden" Name="LectureBox" Header="Fag" HorizontalAlignment="Left" Margin="10,41,0,0" VerticalAlignment="Top" Height="193" Width="272">
+            <Grid HorizontalAlignment="Left" Height="183" VerticalAlignment="Top" Width="262" Margin="0,0,-2,-12">
+                <TextBox HorizontalAlignment="Left" Height="23" Margin="75,0,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="177"/>
+                <Label Content="FagNavn:" HorizontalAlignment="Left" VerticalAlignment="Top" Width="70" Margin="0,-4,0,0"/>
+                <ComboBox HorizontalAlignment="Left" Margin="75,56,0,0" VerticalAlignment="Top" Width="177"/>
+                <TextBox HorizontalAlignment="Left" Height="23" Margin="75,28,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="177"/>
+                <Label Content="Varighed:" HorizontalAlignment="Left" Margin="0,24,0,0" VerticalAlignment="Top" Width="70"/>
+                <Label Content="Lære:" HorizontalAlignment="Left" Margin="0,52,0,0" VerticalAlignment="Top" Width="70"/>
+            </Grid>
+        </GroupBox>
+        <GroupBox Visibility="Hidden" Name="StudentBox" Header="Elev" HorizontalAlignment="Left" Margin="10,41,0,0" VerticalAlignment="Top" Height="193" Width="272">
+            <Grid HorizontalAlignment="Left" Height="183" VerticalAlignment="Top" Width="262" Margin="0,0,-2,-12">
+                <Label Content="Fornavn:" HorizontalAlignment="Left" VerticalAlignment="Top" Width="70"/>
+                <Label Content="Efternavn:" HorizontalAlignment="Left" VerticalAlignment="Top" Width="70" Margin="0,31,0,0"/>
+                <Label Content="Hold:" HorizontalAlignment="Left" VerticalAlignment="Top" Width="70" Margin="0,62,0,0"/>
+                <TextBox HorizontalAlignment="Left" Height="23" Margin="75,3,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="177"/>
+                <TextBox HorizontalAlignment="Left" Height="23" Margin="75,34,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="177"/>
+                <ComboBox HorizontalAlignment="Left" Margin="75,66,0,0" VerticalAlignment="Top" Width="177"/>
+            </Grid>
+        </GroupBox>
+        <GroupBox Visibility="Hidden" Name="ClassBox" Header="Hold" HorizontalAlignment="Left" Margin="10,41,0,0" VerticalAlignment="Top" Height="193" Width="272">
+            <Grid HorizontalAlignment="Left" Height="183" VerticalAlignment="Top" Width="262" Margin="0,0,-2,-12">
+                <ListBox HorizontalAlignment="Left" Height="110" Margin="10,63,0,0" VerticalAlignment="Top" Width="242">
+                    <ListBoxItem>
+                        <CheckBox Content="CheckBox"/>
+                    </ListBoxItem>
+                    <ListBoxItem>
+                        <CheckBox Content="CheckBox"/>
+                    </ListBoxItem>
+                    <ListBoxItem>
+                        <CheckBox Content="CheckBox"/>
+                    </ListBoxItem>
+                    <ListBoxItem>
+                        <CheckBox />
+                    </ListBoxItem>
+                </ListBox>
+                <Label Content="Hold Navn:" HorizontalAlignment="Left" VerticalAlignment="Top" Width="70"/>
+                <TextBox HorizontalAlignment="Left" Height="23" Margin="75,4,0,0" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Width="177"/>
+                <Label Content="Varighed:" HorizontalAlignment="Left" Margin="0,31,0,0" VerticalAlignment="Top" Width="70"/>
+                <TextBox HorizontalAlignment="Left" Height="23" Margin="75,35,0,0" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Width="177"/>
+            </Grid>
+        </GroupBox>
     </Grid>
 </Window>
