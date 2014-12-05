@@ -1,4 +1,5 @@
 TODO:
 Make dynamic listbox (Class)(AddData.xaml)
 Make Class instance (AddData.xaml)
-Edit and delete UI
+Daniel: Entity framework DB https://github.com/and3k5/ScheduleSystem/blob/master/ScheduleSystem/ScheduleSystem.DesktopClient/App.config#L37
+Michael: Combobox MVVM
