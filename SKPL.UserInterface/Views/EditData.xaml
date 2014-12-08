@@ -3,7 +3,7 @@
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
         Title="EditData" Height="300" Width="300">
     <Grid>
-        <ComboBox x:Name="EditBox"  HorizontalAlignment="Left" Margin="90,10,0,0" VerticalAlignment="Top" Width="192" SelectionChanged="ComboBox_SelectionChanged">
+        <ComboBox x:Name="EditBox"  HorizontalAlignment="Left" Margin="90,10,0,0" VerticalAlignment="Top" Width="192">
             <ComboBoxItem x:Name="TeacherBoxItem" Content="Lære"/>
             <ComboBoxItem x:Name="LectureBoxItem" Content="Fag"/>
             <ComboBoxItem x:Name="ClassBoxItem" Content="Hold"/>

@@ -1,16 +1,14 @@
 ﻿<Window x:Class="SKPL.UserInterface.Views.AddData"
         xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
-        Title="AddData" Height="300" Width="300" MinHeight="300" MinWidth="300" MaxHeight="300" MaxWidth="300" DataContext="">
+        xmlns:vm="clr-namespace:SKPL.UserInterface.ViewModels"
+        Title="AddData" Height="300" Width="300" MinHeight="300" MinWidth="300" MaxHeight="300" MaxWidth="300">
+    <Window.DataContext>
+        <vm:ViewModelClass></vm:ViewModelClass>
+    </Window.DataContext>
     <Grid>
         <Button Content="Button" HorizontalAlignment="Right" Margin="0,0,10,5" VerticalAlignment="Bottom" Width="75"/>
-        <ComboBox Name="AddBox"  HorizontalAlignment="Left" Margin="90,10,0,0" VerticalAlignment="Top" Width="192" SelectedItem="{Binding SelectedItem, Mode=TwoWay}">
-            <ComboBoxItem Name="TeacherBoxItem">Lære</ComboBoxItem>
-            <ComboBoxItem Name="LectureBoxItem">Fag</ComboBoxItem>
-            <ComboBoxItem Name="ClassBoxItem">Hold</ComboBoxItem>
-            <ComboBoxItem Name="StudentBoxItem">Elev</ComboBoxItem>
-            <ComboBoxItem Name="ClassInstanceBoxItem">Hold Instans</ComboBoxItem>
-        </ComboBox>
+        <ComboBox ItemsSource="{Binding Source}" Name="AddBox"  HorizontalAlignment="Left" Margin="90,10,0,0" VerticalAlignment="Top" Width="192" SelectedItem="{Binding SelectedItem, Mode=TwoWay}"></ComboBox>
         <Label Content="Tilføj:" HorizontalAlignment="Left" Margin="10,10,0,0" VerticalAlignment="Top" Width="75"/>
         <GroupBox Visibility="Hidden" Header="Lære" HorizontalAlignment="Left" Margin="10,41,0,0" VerticalAlignment="Top" Height="193" Width="272" Name="TeacherBox">
             <Grid HorizontalAlignment="Left" Height="193" VerticalAlignment="Top" Width="272" Margin="0,0,-12,-22">

@@ -16,15 +16,7 @@ namespace SKPL.ClassLibary
             get { return _addCBItem; }
             set
             {
-                switch (_addCBItem)
-                {
-                    case TeacherBoxItem:
-
-                        break;
-                    case StudentBoxItem:
-
-                        break;
-                }
+                
             }
         }
     }
