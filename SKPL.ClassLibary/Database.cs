@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
+using System.ComponentModel.DataAnnotations.Schema;
 using System.Data.Entity;
 using System.Linq;
 using System.Text;
@@ -12,73 +13,86 @@ namespace SKPL.ClassLibary
     {
         public static void Create()
         {
-            using (var db = new Datebasetable())
+            using (var db = new Databasetable())
             {
 
             }
         }
     }
 
-    public class Datebasetable : DbContext
+    public class Databasetable : DbContext
     {
         public DbSet<Class> Class { get; set; }
         public DbSet<ClassInstance> ClassInstance { get; set; }
         public DbSet<Lecture> Lecture { get; set; }
-        public DbSet<Students> Students { get; set; }
-        public DbSet<Teachers> Teachers { get; set; }
-        public DbSet<TeacherClasses> TeacherClasseses { get; set; }
+        public DbSet<Student> Students { get; set; }
+        public DbSet<Teacher> Teachers { get; set; }
+        public DbSet<TeacherClass> TeacherClasseses { get; set; }
     }
 
     public class ClassInstance
     {
+        [Key] // Primary key
         public int ClassInstanceId { get; set; }
         public DateTime Date { get; set; }
         public int StudentCount { get; set; }
-
-        public int ClassId { get; set; }
-        public virtual Class Class { get; set; }
+        
+        //[ForeignKey("Class")]
+        //public int ClassId { get; set; }
+        //public virtual Class Class { get; set; }
     }
     public class Class
     {
+        [Key] // Primary key
         public int ClassId { get; set; }
         public string ClassName { get; set; }
         public int ClassDuration { get; set; }
-        public string Lectures { get; set; } // "2,6,l2,36,6,2"
+
+        ////[ForeignKey("Lecture")]
+        //public string Lectures { get; set; } // "2,6,12,36,6,2"
     }
     public class Lecture
     {
+        [Key] // Primary key
         public int LectureId { get; set; }
         public string LectureName { get; set; }
         public int Duration { get; set; }
 
         public int TeacherId { get; set; }
-        public virtual Teachers Teachers { get; set; }
+        public virtual Teacher Teachers { get; set; }
     }
-    public class Students
+    public class Student
     {
+        [Key] // Primary key
         public int StudentId { get; set; }
         public string StudentName { get; set; }
 
-        public int ClassInstanceId { get; set; }
-        public virtual ClassInstance ClassInstance { get; set; }
+        //[ForeignKey("ClassInstance")]
+        //public int ClassInstanceId { get; set; }
+        //public virtual ClassInstance ClassInstance { get; set; }
     }
-    public class Teachers
+    public class Teacher
     {
+        [Key] // Primary key
         public int TeacherId { get; set; }
         public string TeacherName { get; set; }
         public string TeacherInitials { get; set; }
     }
-    public class TeacherClasses
+    public class TeacherClass
     {
+        [Key] // Primary key
         public int TeacherClassId { get; set; }
-        
-        public int ClassInstanceId { get; set; }
-        public virtual ClassInstance ClassInstance { get; set; }
 
-        public int LectureId { get; set; }
-        public virtual Lecture Lecture { get; set; }
-        
-        public int TeacherId { get; set; }
-        public virtual Teachers Teachers { get; set; }
+        //[ForeignKey("ClassInstance")]
+        //public int ClassInstanceId { get; set; }
+        //public virtual ClassInstance ClassInstance { get; set; }
+
+        //[ForeignKey("Lecture")]
+        //public int LectureId { get; set; }
+        //public virtual Lecture Lecture { get; set; }
+
+        //[ForeignKey("Teacher")]
+        //public int TeacherId { get; set; }
+        //public virtual Teacher Teachers { get; set; }
     }
 }

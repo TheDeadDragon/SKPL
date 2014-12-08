@@ -13,10 +13,13 @@ namespace SKPL.UserInterface.ViewModels
         {
         }
 
-        List<string> _source = new List<string> { "Lære", "Fag", "Elev", "Hold", "Hold Instance" };
+        private List<string> _source = new List<string> {"Lære", "Fag", "Elev", "Hold", "Hold Instance"};
         private string _selectedItem = null;
 
-        public List<string> Source { get { return _source; } }
+        public List<string> Source
+        {
+            get { return _source; }
+        }
 
         public string SelectedItem
         {
@@ -24,11 +27,14 @@ namespace SKPL.UserInterface.ViewModels
             set
             {
                 _selectedItem = value;
-                string Content = (string) value.Content;
+                //string Content = (string) value.Content;
             }
         }
 
         public event PropertyChangedEventHandler PropertyChanged;
-        private void RaisePropertyChanged(string SelectedItemchange)
+
+        /*private void RaisePropertyChanged(string SelectedItemchange)
+        {
+        }*/
     }
 }

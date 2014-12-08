@@ -59,6 +59,7 @@
   <ItemGroup>
     <Compile Include="UnitTest1.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="TestDB.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
@@ -68,6 +69,10 @@
     <ProjectReference Include="..\SKPL.ClassLibary\SKPL.ClassLibary.csproj">
       <Project>{ca5e67fe-4489-41b1-a45d-d7f9aa20d1b8}</Project>
       <Name>SKPL.ClassLibary</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\SKPL.UserInterface\SKPL.UserInterface.csproj">
+      <Project>{24db7ca2-8937-4675-aec2-45b6f281bb93}</Project>
+      <Name>SKPL.UserInterface</Name>
     </ProjectReference>
   </ItemGroup>
   <Choose>
