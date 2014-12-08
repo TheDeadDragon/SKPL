@@ -76,7 +76,7 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </Page>
-    <Compile Include="ViewModels\AddViewClass.cs" />
+    <Compile Include="ViewModels\ViewModelClass.cs" />
     <Compile Include="Views\AddData.xaml.cs">
       <DependentUpon>AddData.xaml</DependentUpon>
     </Compile>
