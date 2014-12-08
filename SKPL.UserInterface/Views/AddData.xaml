@@ -2,21 +2,26 @@
         xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
         xmlns:vm="clr-namespace:SKPL.UserInterface.ViewModels"
-        Title="AddData" Height="300" Width="300" MinHeight="300" MinWidth="300" MaxHeight="300" MaxWidth="300">
+        Title="AddData" Height="300" Width="300" MinHeight="300" MinWidth="300" MaxHeight="300" MaxWidth="300"
+        >
     <Window.DataContext>
         <vm:ViewModelClass></vm:ViewModelClass>
     </Window.DataContext>
+    <Window.Resources>
+        <BooleanToVisibilityConverter x:Key="BoolToVis"></BooleanToVisibilityConverter>
+    </Window.Resources>
     <Grid>
         <Button Content="Button" HorizontalAlignment="Right" Margin="0,0,10,5" VerticalAlignment="Bottom" Width="75"/>
-        <ComboBox ItemsSource="{Binding Source}" Name="AddBox"  HorizontalAlignment="Left" Margin="90,10,0,0" VerticalAlignment="Top" Width="192" SelectedItem="{Binding SelectedItem, Mode=TwoWay}"></ComboBox>
+        <ComboBox ItemsSource="{Binding Source}" Name="AddBox"  HorizontalAlignment="Left" Margin="90,10,0,0" VerticalAlignment="Top" Width="192" SelectedItem="{Binding SelectedItem, Mode=TwoWay}">
+            
+        </ComboBox>
         <Label Content="Tilføj:" HorizontalAlignment="Left" Margin="10,10,0,0" VerticalAlignment="Top" Width="75"/>
-        <GroupBox Visibility="Hidden" Header="Lære" HorizontalAlignment="Left" Margin="10,41,0,0" VerticalAlignment="Top" Height="193" Width="272" Name="TeacherBox">
+        <GroupBox Visibility="{Binding LGBV, Converter={StaticResource BoolToVis}, FallbackValue=Hidden}" Header="Lære" HorizontalAlignment="Left" Margin="10,41,0,0" VerticalAlignment="Top" Height="193" Width="272" Name="TeacherBox">
             <Grid HorizontalAlignment="Left" Height="193" VerticalAlignment="Top" Width="272" Margin="0,0,-12,-22">
                 <Label Content="Fornavn:" HorizontalAlignment="Left" VerticalAlignment="Top" Width="70"/>
                 <TextBox HorizontalAlignment="Left" Height="23" Margin="70,3,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="192"/>
                 <Label Content="Efternavn" HorizontalAlignment="Left" Margin="0,31,0,0" VerticalAlignment="Top" Width="65"/>
                 <TextBox HorizontalAlignment="Left" Height="23" Margin="70,31,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="192"/>
-
             </Grid>
         </GroupBox>
         <GroupBox Visibility="Hidden" Name="LectureBox" Header="Fag" HorizontalAlignment="Left" Margin="10,41,0,0" VerticalAlignment="Top" Height="193" Width="272">
