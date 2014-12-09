@@ -29,10 +29,10 @@ namespace Test_Project
 
             var lectures = new List<Lecture>
             {
-                new Lecture{LectureName = "Cisco CCNA Exploration 1", Duration = 5, TeacherId = 4},
-                new Lecture{LectureName = "Cisco CCNA Exploration 2", Duration = 5, TeacherId = 4},
-                new Lecture{LectureName = "Cisco CCNA Exploration 3", Duration = 7, TeacherId = 4},
-                new Lecture{LectureName = "Cisco CCNA Exploration 4", Duration = 10, TeacherId = 4}
+                new Lecture{LectureName = "Cisco CCNA Exploration 1", Duration = 5},
+                new Lecture{LectureName = "Cisco CCNA Exploration 2", Duration = 5},
+                new Lecture{LectureName = "Cisco CCNA Exploration 3", Duration = 7},
+                new Lecture{LectureName = "Cisco CCNA Exploration 4", Duration = 10}
             };
 
             var classInstance = new List<ClassInstance>
@@ -45,8 +45,8 @@ namespace Test_Project
                 
             };
 
-            classes.ForEach(c => context.Class.Add(c));
-            classInstance.ForEach(ci => context.ClassInstance.Add(ci));
+            //classes.ForEach(c => context.Class.Add(c));
+            //classInstance.ForEach(ci => context.ClassInstance.Add(ci));
             lectures.ForEach(l => context.Lecture.Add(l));
             students.ForEach(s => context.Students.Add(s));
             teachers.ForEach(t => context.Teachers.Add(t));

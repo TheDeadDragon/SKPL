@@ -36,10 +36,10 @@ namespace SKPL.ClassLibary
         public int ClassInstanceId { get; set; }
         public DateTime Date { get; set; }
         public int StudentCount { get; set; }
-        
-        //[ForeignKey("Class")]
+
+        //[ForeignKey("ClassId")]
         //public int ClassId { get; set; }
-        //public virtual Class Class { get; set; }
+        //public virtual ICollection<Class> Class { get; set; }
     }
     public class Class
     {
@@ -48,8 +48,8 @@ namespace SKPL.ClassLibary
         public string ClassName { get; set; }
         public int ClassDuration { get; set; }
 
-        ////[ForeignKey("Lecture")]
-        //public string Lectures { get; set; } // "2,6,12,36,6,2"
+        
+        public string Lectures { get; set; } // "2,6,12,36,6,2"
     }
     public class Lecture
     {
@@ -57,9 +57,9 @@ namespace SKPL.ClassLibary
         public int LectureId { get; set; }
         public string LectureName { get; set; }
         public int Duration { get; set; }
-
         public int TeacherId { get; set; }
-        public virtual Teacher Teachers { get; set; }
+        [ForeignKey("TeacherId")]
+        public virtual List<Teacher> Teachers { get; set; }
     }
     public class Student
     {
@@ -67,9 +67,9 @@ namespace SKPL.ClassLibary
         public int StudentId { get; set; }
         public string StudentName { get; set; }
 
-        //[ForeignKey("ClassInstance")]
+        //[ForeignKey("ClassInstanceId")]
         //public int ClassInstanceId { get; set; }
-        //public virtual ClassInstance ClassInstance { get; set; }
+        //public virtual ICollection<ClassInstance> ClassInstance { get; set; }
     }
     public class Teacher
     {
@@ -83,16 +83,16 @@ namespace SKPL.ClassLibary
         [Key] // Primary key
         public int TeacherClassId { get; set; }
 
-        //[ForeignKey("ClassInstance")]
+        //[ForeignKey("ClassInstanceId")]
         //public int ClassInstanceId { get; set; }
-        //public virtual ClassInstance ClassInstance { get; set; }
-
-        //[ForeignKey("Lecture")]
+        //public virtual ICollection<ClassInstance> ClassInstance { get; set; }
+        //
+        //[ForeignKey("LectureId")]
         //public int LectureId { get; set; }
-        //public virtual Lecture Lecture { get; set; }
-
-        //[ForeignKey("Teacher")]
+        //public virtual ICollection<Lecture> Lecture { get; set; }
+        //
+        //[ForeignKey("TeacherId")]
         //public int TeacherId { get; set; }
-        //public virtual Teacher Teachers { get; set; }
+        //public virtual ICollection<Teacher> Teachers { get; set; }
     }
 }
