@@ -14,7 +14,7 @@
                 <Button Command="{Binding EditClickCommand}" x:Name="Redigere" Content="Redigere" Margin="0,25,5,0" VerticalAlignment="Top" Width="75" HorizontalAlignment="Right"/>
                 <Button Command="{Binding DeleteClickCommand}" x:Name="Slet" Content="Slet" Margin="0,50,5,0" VerticalAlignment="Top" Width="75" HorizontalAlignment="Right"/>
                 <Button Content="Button" Margin="0,75,5,0" VerticalAlignment="Top" Width="75" HorizontalAlignment="Right"/>
-                <Button Command="{Binding MyButtonClickCommand}" Content="Button" Margin="0,100,5,0" VerticalAlignment="Top" HorizontalAlignment="Right" Width="75"/>
+                <Button Content="Button" Margin="0,100,5,0" VerticalAlignment="Top" HorizontalAlignment="Right" Width="75"/>
             </Grid>
         </Border>
         <Border Margin="10,10,104,10" BorderBrush="Black" BorderThickness="2">
