@@ -44,5 +44,17 @@ namespace SKPL.UserInterface.ViewModels
             delete.Show();
         }
 
+        public ICommand CalenderClickCommand
+        {
+            get { return new DelegateCommand<object>(UpdateCourseBox); }
+        }
+
+        private static void UpdateCourseBox(object context)
+        {
+
+            //Text to textbox
+            
+            /////////////////
+        }
     }
 }
