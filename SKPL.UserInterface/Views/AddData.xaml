@@ -16,7 +16,7 @@
             
         </ComboBox>
         <Label Content="Tilføj:" HorizontalAlignment="Left" Margin="10,10,0,0" VerticalAlignment="Top" Width="75"/>
-        <GroupBox Visibility="{Binding LGBV, Converter={StaticResource BoolToVis}, FallbackValue=Hidden}" Header="Lære" HorizontalAlignment="Left" Margin="10,41,0,0" VerticalAlignment="Top" Height="193" Width="272" Name="TeacherBox">
+        <GroupBox Visibility="{Binding LGBV, Converter={StaticResource BoolToVis}, FallbackValue=Hidden, Mode=TwoWay}" Header="Lære" HorizontalAlignment="Left" Margin="10,41,0,0" VerticalAlignment="Top" Height="193" Width="272" Name="TeacherBox">
             <Grid HorizontalAlignment="Left" Height="193" VerticalAlignment="Top" Width="272" Margin="0,0,-12,-22">
                 <Label Content="Fornavn:" HorizontalAlignment="Left" VerticalAlignment="Top" Width="70"/>
                 <TextBox HorizontalAlignment="Left" Height="23" Margin="70,3,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="192"/>
