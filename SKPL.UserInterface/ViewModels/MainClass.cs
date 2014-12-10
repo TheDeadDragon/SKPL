@@ -16,7 +16,7 @@ namespace SKPL.UserInterface.ViewModels
             get { return new DelegateCommand<object>(AddFuncToCall); }
         }
 
-        private void AddFuncToCall(object context)
+        private static void AddFuncToCall(object context)
         {
             var add = new AddData();
             add.Show();
@@ -27,7 +27,7 @@ namespace SKPL.UserInterface.ViewModels
             get { return new DelegateCommand<object>(EditFuncToCall); }
         }
 
-        private void EditFuncToCall(object context)
+        private static void EditFuncToCall(object context)
         {
             var edit = new EditData();
             edit.Show();
@@ -38,7 +38,7 @@ namespace SKPL.UserInterface.ViewModels
             get { return new DelegateCommand<object>(DeleteFuncToCall); }
         }
 
-        private void DeleteFuncToCall(object context)
+        private static void DeleteFuncToCall(object context)
         {
             var delete = new DeleteData();
             delete.Show();
