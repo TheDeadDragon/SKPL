@@ -1,7 +1,4 @@
-﻿using System.Collections;
-using System.Diagnostics;
-using System.Linq.Expressions;
-using System.Windows;
+﻿using System.Windows;
 
 namespace SKPL.UserInterface.Views
 {

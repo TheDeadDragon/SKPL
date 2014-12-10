@@ -1,15 +1,5 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Globalization;
-using System.Linq;
-using System.Security.Cryptography.X509Certificates;
-using System.Text;
-using System.Threading.Tasks;
-using System.Windows.Controls;
-using System.ComponentModel;
-using System.Windows.Data;
+﻿using System.ComponentModel;
 using System.Windows.Input;
-using System.Windows;
 using Microsoft.Practices.Prism.Commands;
 
 namespace SKPL.UserInterface.ViewModels

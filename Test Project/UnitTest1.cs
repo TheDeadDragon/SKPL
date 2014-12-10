@@ -1,6 +1,5 @@
-﻿using System;
-using Microsoft.VisualStudio.TestTools.UnitTesting;
-using SKPL.ClassLibary;
+﻿using Microsoft.VisualStudio.TestTools.UnitTesting;
+
 namespace Test_Project
 {
     [TestClass]
