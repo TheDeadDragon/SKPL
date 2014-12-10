@@ -97,6 +97,7 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </Page>
+    <Compile Include="Properties\Annotations.cs" />
     <Compile Include="ViewModels\MainClass.cs" />
     <Compile Include="ViewModels\ViewModelClass.cs" />
     <Compile Include="Views\AddData.xaml.cs">

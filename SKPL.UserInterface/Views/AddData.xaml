@@ -7,24 +7,35 @@
     <Window.DataContext>
         <vm:ViewModelClass></vm:ViewModelClass>
     </Window.DataContext>
-    <Window.Resources>
-        <BooleanToVisibilityConverter x:Key="BoolToVis"></BooleanToVisibilityConverter>
-    </Window.Resources>
     <Grid>
-        <Button Content="Button" HorizontalAlignment="Right" Margin="0,0,10,5" VerticalAlignment="Bottom" Width="75"/>
-        <ComboBox ItemsSource="{Binding Source}" Name="AddBox"  HorizontalAlignment="Left" Margin="90,10,0,0" VerticalAlignment="Top" Width="192" SelectedItem="{Binding SelectedItem, Mode=TwoWay}">
-            
+        <Button Command="{Binding AddBtnCommand}" Content="Tilføj" HorizontalAlignment="Right" Margin="0,0,10,5" VerticalAlignment="Bottom" Width="75"/>
+        <ComboBox Name="AddBox"  HorizontalAlignment="Left" Margin="90,10,0,0" VerticalAlignment="Top" Width="192" SelectedValue="{Binding SelectedItem, Mode=TwoWay}">
+            <ComboBoxItem Tag="L" IsSelected="True">Lære</ComboBoxItem>
+            <ComboBoxItem Tag="F">Fag</ComboBoxItem>
+            <ComboBoxItem Tag="E">Elev</ComboBoxItem>
+            <ComboBoxItem Tag="H">Hold</ComboBoxItem>
+            <ComboBoxItem Tag="HI">Hold Instance</ComboBoxItem>
         </ComboBox>
         <Label Content="Tilføj:" HorizontalAlignment="Left" Margin="10,10,0,0" VerticalAlignment="Top" Width="75"/>
-        <GroupBox Visibility="{Binding LGBV, Converter={StaticResource BoolToVis}, FallbackValue=Hidden, Mode=TwoWay}" Header="Lære" HorizontalAlignment="Left" Margin="10,41,0,0" VerticalAlignment="Top" Height="193" Width="272" Name="TeacherBox">
+        <GroupBox Header="Lære" HorizontalAlignment="Left" Margin="10,41,0,0" VerticalAlignment="Top" Height="193" Width="272" Name="TeacherBox">
             <Grid HorizontalAlignment="Left" Height="193" VerticalAlignment="Top" Width="272" Margin="0,0,-12,-22">
                 <Label Content="Fornavn:" HorizontalAlignment="Left" VerticalAlignment="Top" Width="70"/>
                 <TextBox HorizontalAlignment="Left" Height="23" Margin="70,3,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="192"/>
                 <Label Content="Efternavn" HorizontalAlignment="Left" Margin="0,31,0,0" VerticalAlignment="Top" Width="65"/>
                 <TextBox HorizontalAlignment="Left" Height="23" Margin="70,31,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="192"/>
             </Grid>
+            <GroupBox.Style>
+                <Style>
+                    <Setter Property="GroupBox.Visibility" Value="Hidden"></Setter>
+                    <Style.Triggers>
+                        <DataTrigger Binding="{Binding ElementName=AddBox, Path=SelectedItem.Tag}" Value="L">
+                            <Setter Property="GroupBox.Visibility" Value="Visible"></Setter>
+                        </DataTrigger>
+                    </Style.Triggers>
+                </Style>
+            </GroupBox.Style>
         </GroupBox>
-        <GroupBox Visibility="Hidden" Name="LectureBox" Header="Fag" HorizontalAlignment="Left" Margin="10,41,0,0" VerticalAlignment="Top" Height="193" Width="272">
+        <GroupBox Name="LectureBox" Header="Fag" HorizontalAlignment="Left" Margin="10,41,0,0" VerticalAlignment="Top" Height="193" Width="272">
             <Grid HorizontalAlignment="Left" Height="183" VerticalAlignment="Top" Width="262" Margin="0,0,-2,-12">
                 <TextBox HorizontalAlignment="Left" Height="23" Margin="75,0,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="177"/>
                 <Label Content="FagNavn:" HorizontalAlignment="Left" VerticalAlignment="Top" Width="70" Margin="0,-4,0,0"/>
@@ -33,8 +44,18 @@
                 <Label Content="Varighed:" HorizontalAlignment="Left" Margin="0,24,0,0" VerticalAlignment="Top" Width="70"/>
                 <Label Content="Lære:" HorizontalAlignment="Left" Margin="0,52,0,0" VerticalAlignment="Top" Width="70"/>
             </Grid>
+            <GroupBox.Style>
+                <Style>
+                    <Setter Property="GroupBox.Visibility" Value="Hidden"></Setter>
+                    <Style.Triggers>
+                        <DataTrigger Binding="{Binding ElementName=AddBox, Path=SelectedItem.Tag}" Value="F">
+                            <Setter Property="GroupBox.Visibility" Value="Visible"></Setter>
+                        </DataTrigger>
+                    </Style.Triggers>
+                </Style>
+            </GroupBox.Style>
         </GroupBox>
-        <GroupBox Visibility="Hidden" Name="StudentBox" Header="Elev" HorizontalAlignment="Left" Margin="10,41,0,0" VerticalAlignment="Top" Height="193" Width="272">
+        <GroupBox Name="StudentBox" Header="Elev" HorizontalAlignment="Left" Margin="10,41,0,0" VerticalAlignment="Top" Height="193" Width="272">
             <Grid HorizontalAlignment="Left" Height="183" VerticalAlignment="Top" Width="262" Margin="0,0,-2,-12">
                 <Label Content="Fornavn:" HorizontalAlignment="Left" VerticalAlignment="Top" Width="70"/>
                 <Label Content="Efternavn:" HorizontalAlignment="Left" VerticalAlignment="Top" Width="70" Margin="0,31,0,0"/>
@@ -43,8 +64,18 @@
                 <TextBox HorizontalAlignment="Left" Height="23" Margin="75,34,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="177"/>
                 <ComboBox HorizontalAlignment="Left" Margin="75,66,0,0" VerticalAlignment="Top" Width="177"/>
             </Grid>
+            <GroupBox.Style>
+                <Style>
+                    <Setter Property="GroupBox.Visibility" Value="Hidden"></Setter>
+                    <Style.Triggers>
+                        <DataTrigger Binding="{Binding ElementName=AddBox, Path=SelectedItem.Tag}" Value="E">
+                            <Setter Property="GroupBox.Visibility" Value="Visible"></Setter>
+                        </DataTrigger>
+                    </Style.Triggers>
+                </Style>
+            </GroupBox.Style>
         </GroupBox>
-        <GroupBox Visibility="Hidden" Name="ClassBox" Header="Hold" HorizontalAlignment="Left" Margin="10,41,0,0" VerticalAlignment="Top" Height="193" Width="272">
+        <GroupBox Name="ClassBox" Header="Hold" HorizontalAlignment="Left" Margin="10,41,0,0" VerticalAlignment="Top" Height="193" Width="272">
             <Grid HorizontalAlignment="Left" Height="183" VerticalAlignment="Top" Width="262" Margin="0,0,-2,-12">
                 <ListBox HorizontalAlignment="Left" Height="110" Margin="10,63,0,0" VerticalAlignment="Top" Width="242">
                     <ListBoxItem>
@@ -65,6 +96,16 @@
                 <Label Content="Varighed:" HorizontalAlignment="Left" Margin="0,31,0,0" VerticalAlignment="Top" Width="70"/>
                 <TextBox HorizontalAlignment="Left" Height="23" Margin="75,35,0,0" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Width="177"/>
             </Grid>
+            <GroupBox.Style>
+                <Style>
+                    <Setter Property="GroupBox.Visibility" Value="Hidden"></Setter>
+                    <Style.Triggers>
+                        <DataTrigger Binding="{Binding ElementName=AddBox, Path=SelectedItem.Tag}" Value="H">
+                            <Setter Property="GroupBox.Visibility" Value="Visible"></Setter>
+                        </DataTrigger>
+                    </Style.Triggers>
+                </Style>
+            </GroupBox.Style>
         </GroupBox>
     </Grid>
 </Window>

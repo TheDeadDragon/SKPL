@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Globalization;
 using System.Linq;
+using System.Security.Cryptography.X509Certificates;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Controls;
@@ -9,20 +10,20 @@ using System.ComponentModel;
 using System.Windows.Data;
 using System.Windows.Input;
 using System.Windows;
+using Microsoft.Practices.Prism.Commands;
 
 namespace SKPL.UserInterface.ViewModels
 {
     public class ViewModelClass : INotifyPropertyChanged
     {
+        public ICommand AddBtnCommand
+        {
+            get { return new DelegateCommand<object>(AddBtnFunction); }
+        }
         public ViewModelClass()
         {
         }
-
-        List<string> _source = new List<string> { "Lære", "Fag", "Elev", "Hold", "Hold Instance" };
         private string _SelectedItem;
-
-        public List<string> Source { get { return _source; } }
-
         public string SelectedItem
         {
             get { return _SelectedItem; }
@@ -32,66 +33,27 @@ namespace SKPL.UserInterface.ViewModels
                 RaisePropertyChanged(_SelectedItem);
             }
         }
-
-        private bool _LGBV;
-
-        public bool LGBV
-        {
-            get { return _LGBV; }
-            set
-            {
-                _LGBV = value;
-            }
-        }
-
         public event PropertyChangedEventHandler PropertyChanged;
         private void RaisePropertyChanged(string selectedItemchange)
         {
             if (PropertyChanged != null)
             {
-                string i = selectedItemchange.ToString();
+                AddSelItem = selectedItemchange;
                 PropertyChanged(this, new PropertyChangedEventArgs(selectedItemchange));
-                switch (i)
-                {
-                    case "Lære":
-                        LGBV = true;
-                        break;
-                    case "Fag":
-                        break;
-                    case "Elev":
-                        break;
-                    case "Hold":
-                        break;
-                    case "Hold Instance":
-                        break;
-                }
             }
         }
-    }
-
-    class BoolToVisibleOrHidden : IValueConverter
-    {
-        public BoolToVisibleOrHidden()
+        public string AddSelItem;
+        private void AddBtnFunction(object context)
         {
-        }
-
-        public object Convert(object value, Type targetType, object parameter, CultureInfo culture)
-        {
-            bool bValue = (bool) value;
-            if (bValue)
-                return Visibility.Visible;
-            else
-                return Visibility.Hidden;
-        }
-
-        public object ConvertBack(object value, Type targetType, object parameter, CultureInfo culture)
-        {
-            Visibility visibility = (Visibility)value;
-
-            if (visibility == Visibility.Visible)
-                return true;
-            else
-                return false;
+            string i = AddSelItem;
+            i = i.Replace("System.Windows.Controls.ComboBoxItem:","");
+            i = i.Trim();
+            switch (i)
+            {
+                case "Lære":
+                    string name = 
+                    break;
+            }
         }
     }
 }
