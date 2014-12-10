@@ -22,77 +22,98 @@ namespace SKPL.ClassLibary
 
     public class Databasetable : DbContext
     {
-        public DbSet<Class> Class { get; set; }
-        public DbSet<ClassInstance> ClassInstance { get; set; }
+        public DbSet<Course> Course { get; set; }
+        public DbSet<CourseInstance> CourseInstance { get; set; }
         public DbSet<Lecture> Lecture { get; set; }
         public DbSet<Student> Students { get; set; }
         public DbSet<Teacher> Teachers { get; set; }
-        public DbSet<TeacherClass> TeacherClasseses { get; set; }
+        public DbSet<LectureTeacher> LectureTeachers { get; set; }
     }
 
-    public class ClassInstance
+    
+    public class LectureTeacher
+    {
+        [Key]
+        [DatabaseGeneratedAttribute(DatabaseGeneratedOption.Identity)]
+        public int LectureTeacherId { get; set; }
+        public int TeacherId { get; set; }
+        [Required]
+        public virtual Teacher Teachers { get; set; }
+
+        public int LectureId { get; set; }
+        [Required]
+        public virtual Lecture Lectures { get; set; }
+        
+        public virtual LectureCourse LectureCourse { get; set; }
+    }
+
+    public class LectureCourse
+    {
+        [Key]
+        [DatabaseGeneratedAttribute(DatabaseGeneratedOption.Identity)]
+        public int LectureCourseId { get; set; }
+        public int CourseId { get; set; }
+        public int LectureTeacherId { get; set; }
+        [Required]
+        public virtual Course Course { get; set; }
+        [Required]
+        public virtual LectureTeacher LectureTeachers { get; set; }
+        
+        public virtual CourseInstance CourseInstance { get; set; }
+    }
+    public class CourseInstance
     {
         [Key] // Primary key
-        public int ClassInstanceId { get; set; }
+        [DatabaseGeneratedAttribute(DatabaseGeneratedOption.Identity)]
+        public int CourseInstanceId { get; set; }
         public DateTime Date { get; set; }
         public int StudentCount { get; set; }
-
-        //[ForeignKey("ClassId")]
-        //public int ClassId { get; set; }
-        //public virtual ICollection<Class> Class { get; set; }
+        public int CourseId { get; set; }
+        [Required]
+        public virtual Course Coursees { get; set; }
+        public int LectureCourseId { get; set; }
+        [Required]
+        public virtual LectureCourse LectureCoursees { get; set; }
     }
-    public class Class
+    //////////////////
+    /*Content Tables*/
+    //////////////////
+    public class Course
     {
         [Key] // Primary key
-        public int ClassId { get; set; }
-        public string ClassName { get; set; }
-        public int ClassDuration { get; set; }
-
-        
-        public string Lectures { get; set; } // "2,6,12,36,6,2"
+        [DatabaseGeneratedAttribute(DatabaseGeneratedOption.Identity)]
+        public int CourseId { get; set; }
+        public string CourseName { get; set; }
+        public int CourseDuration { get; set; }
+        //public string Lectures { get; set; } // "2,6,12,36,6,2"
+        public virtual LectureCourse LectureCourse { get; set; }
     }
     public class Lecture
     {
         [Key] // Primary key
+        [DatabaseGeneratedAttribute(DatabaseGeneratedOption.Identity)]
         public int LectureId { get; set; }
         public string LectureName { get; set; }
         public int Duration { get; set; }
-        public int TeacherId { get; set; }
-        [ForeignKey("TeacherId")]
-        public virtual List<Teacher> Teachers { get; set; }
+        public virtual LectureTeacher LectureTeacher { get; set; }
     }
     public class Student
     {
         [Key] // Primary key
+        [DatabaseGeneratedAttribute(DatabaseGeneratedOption.Identity)]
         public int StudentId { get; set; }
         public string StudentName { get; set; }
 
-        //[ForeignKey("ClassInstanceId")]
-        //public int ClassInstanceId { get; set; }
-        //public virtual ICollection<ClassInstance> ClassInstance { get; set; }
     }
     public class Teacher
     {
-        [Key] // Primary key
+        [Key]// Primary key
+        [DatabaseGeneratedAttribute(DatabaseGeneratedOption.Identity)]
         public int TeacherId { get; set; }
         public string TeacherName { get; set; }
+        [Index(IsUnique = true)]
+        [StringLength(4)]
         public string TeacherInitials { get; set; }
-    }
-    public class TeacherClass
-    {
-        [Key] // Primary key
-        public int TeacherClassId { get; set; }
-
-        //[ForeignKey("ClassInstanceId")]
-        //public int ClassInstanceId { get; set; }
-        //public virtual ICollection<ClassInstance> ClassInstance { get; set; }
-        //
-        //[ForeignKey("LectureId")]
-        //public int LectureId { get; set; }
-        //public virtual ICollection<Lecture> Lecture { get; set; }
-        //
-        //[ForeignKey("TeacherId")]
-        //public int TeacherId { get; set; }
-        //public virtual ICollection<Teacher> Teachers { get; set; }
+        public virtual LectureTeacher LectureTeacher { get; set; }
     }
 }

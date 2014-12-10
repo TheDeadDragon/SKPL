@@ -15,40 +15,40 @@ namespace Test_Project
         {
             var students = new List<Student>
             {
-                new Student{StudentName = "Svend"},
-                new Student{StudentName = "Ivan"},
-                new Student{StudentName = "Michael"},
-                new Student{StudentName = "Daniel"}
+                //new Student{StudentName = "Svend"},
+                //new Student{StudentName = "Ivan"},
+                //new Student{StudentName = "Michael"},
+                //new Student{StudentName = "Daniel"}
             };
 
             var teachers = new List<Teacher>
             {
-                new Teacher{TeacherName = "Paul Saunders", TeacherInitials = "PS"},
-                new Teacher{TeacherName = "Henrik Thomsen", TeacherInitials = "HT"}
+               //new Teacher{TeacherName = "Paul Saunders", TeacherInitials = "PS"},
+               new Teacher{TeacherName = "Henrik Thomsen", TeacherInitials = "HT"}
             };
 
-            var lectures = new List<Lecture>
-            {
-                new Lecture{LectureName = "Cisco CCNA Exploration 1", Duration = 5},
-                new Lecture{LectureName = "Cisco CCNA Exploration 2", Duration = 5},
-                new Lecture{LectureName = "Cisco CCNA Exploration 3", Duration = 7},
-                new Lecture{LectureName = "Cisco CCNA Exploration 4", Duration = 10}
-            };
-
-            var classInstance = new List<ClassInstance>
-            {
-
-            };
-
-            var classes =new List<Class>
-            {
+            //var lectures = new List<Lecture>
+            //{
+            //    new Lecture{LectureName = "Cisco CCNA Exploration 1", Duration = 5},
+            //    new Lecture{LectureName = "Cisco CCNA Exploration 2", Duration = 5},
+            //    new Lecture{LectureName = "Cisco CCNA Exploration 3", Duration = 7},
+            //    new Lecture{LectureName = "Cisco CCNA Exploration 4", Duration = 10}
+            //};
+            
+            //var classInstance = new List<ClassInstance>
+            //{
+            
+            //};
+            
+            //var classes =new List<Class>
+            //{
                 
-            };
+            //};
 
             //classes.ForEach(c => context.Class.Add(c));
             //classInstance.ForEach(ci => context.ClassInstance.Add(ci));
-            lectures.ForEach(l => context.Lecture.Add(l));
-            students.ForEach(s => context.Students.Add(s));
+            //lectures.ForEach(l => context.Lecture.Add(l));
+            //students.ForEach(s => context.Students.Add(s));
             teachers.ForEach(t => context.Teachers.Add(t));
             context.SaveChanges();
         }
