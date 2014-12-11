@@ -1,3 +1,2 @@
-this project need's:
-entity framework and Prism
-to get it to work
+Impotant:
+you need to install entity framework 6 and Prism (found in the nuget manager (prism is in online))
