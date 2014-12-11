@@ -12,11 +12,13 @@ namespace SKPL.UserInterface.ViewModels
         {
             get { return new DelegateCommand<object>(AddBtnFunction); }
         }
-        public ViewModelClass()
+        public ViewModelClass() //sometimes creates error if it is not here
         {
 
         }
-
+        //////////////////////////////////////////////////////////////////////////////////
+        // used to get and set the value of the combobox
+        //////////////////////////////////////////////////////////////////////////////////
         private string _SelectedItem; //Private string to throw around in class
         public string SelectedItem //The check on selected combobox item
         {
@@ -36,12 +38,8 @@ namespace SKPL.UserInterface.ViewModels
                 PropertyChanged(this, new PropertyChangedEventArgs(selectedItemchange));
             }
         }
-        private string _LFN;
-        public string LFN
-        {
-            get { return _LFN; }
-        }
-
+        //////////////////////////////////////////////////////////////////////////////////
+        //////////////////////////////////////////////////////////////////////////////////
         public string AddSelItem; //String to handle which combobox value is selected
 
         //Function to save written data depending on which combobox item is chosen.
@@ -56,7 +54,8 @@ namespace SKPL.UserInterface.ViewModels
             switch (i)
             {
                 case "Lære":
-
+                    MessageBox.Show("Works");
+                    //here would the code go for adding a teacher. we would take first and last name from the boxes in the ui then make the teacher initials from the names.(first 2 letter's in each and it was taken the make something like 3 from first and one from lastname)
                     break;
 
                 case  "Elev":
