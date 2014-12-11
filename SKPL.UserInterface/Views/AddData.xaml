@@ -14,7 +14,7 @@
             <ComboBoxItem Tag="F">Fag</ComboBoxItem>
             <ComboBoxItem Tag="E">Elev</ComboBoxItem>
             <ComboBoxItem Tag="H">Hold</ComboBoxItem>
-            <ComboBoxItem Tag="HI">Hold Instance</ComboBoxItem>
+            <ComboBoxItem Tag="HI">Hold Instans</ComboBoxItem>
         </ComboBox>
         <Label Content="Tilføj:" HorizontalAlignment="Left" Margin="10,10,0,0" VerticalAlignment="Top" Width="75"/>
         <GroupBox Header="Lære" HorizontalAlignment="Left" Margin="10,41,0,0" VerticalAlignment="Top" Height="193" Width="272" Name="TeacherBox">
