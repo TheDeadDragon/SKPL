@@ -59,11 +59,11 @@ namespace Test_Project
             //Test to add data to database tables
             students.ForEach(s => context.Students.Add(s));
             teachers.ForEach(t => context.Teachers.Add(t));
-            lectures.ForEach(l => context.Lecture.Add(l));
+            lectures.ForEach(l => context.Lectures.Add(l));
             lectureTeacher.ForEach(lt => context.LectureTeachers.Add(lt));
             lectureCourse.ForEach(lc => context.LectureCourses.Add(lc));
-            course.ForEach(c => context.Course.Add(c));
-            courseInstance.ForEach(ci => context.CourseInstance.Add(ci));
+            course.ForEach(c => context.Courses.Add(c));
+            courseInstance.ForEach(ci => context.CourseInstances.Add(ci));
 
             //Saves to database
             context.SaveChanges();
