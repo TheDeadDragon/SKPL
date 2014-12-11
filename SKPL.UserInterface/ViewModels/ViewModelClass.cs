@@ -32,6 +32,12 @@ namespace SKPL.UserInterface.ViewModels
                 PropertyChanged(this, new PropertyChangedEventArgs(selectedItemchange));
             }
         }
+        private string _LFN;
+        public string LFN
+        {
+            get { return _LFN; }
+        }
+
         public string AddSelItem;
         private void AddBtnFunction(object context)
         {
@@ -41,7 +47,7 @@ namespace SKPL.UserInterface.ViewModels
             switch (i)
             {
                 case "Lære":
-                    string name = 
+                    //string name = 
                     break;
             }
         }
